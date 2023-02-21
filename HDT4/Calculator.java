@@ -32,7 +32,7 @@ public class Calculator {
      * @param stack
      * @return String
      */
-    public <T> String convertirExpresion(String infix, IStack<Character> stack) {
+    public static <T> String convertirExpresion(String infix, IStack<Character> stack) {
         String postfix = "";
         for (char c : infix.toCharArray()) {
             if (Character.isDigit(c)) {
