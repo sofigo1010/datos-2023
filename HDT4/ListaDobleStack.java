@@ -1,21 +1,21 @@
 /**
  * @author Sofia Garcia
  * Folder: HDT4
- * Archivo: ListaSimpleStack.java
+ * Archivo: ListaDobleStack.java
  * Fecha: 21/02/2023
  */
 
 import java.util.EmptyStackException;
 
-import structure5.SinglyLinkedList;
+import structure5.DoublyLinkedList;
 
-public class ListaSimpleStack<T> implements IStack<T>{
-    private SinglyLinkedList<T> SingleList = new SinglyLinkedList<>();
+public class ListaDobleStack<T> implements IStack<T>{
+    private DoublyLinkedList<T> DoubleList = new DoublyLinkedList<>();
 
     @Override
     public void push(T item) {
         // TODO Auto-generated method stub
-        SingleList.addFirst(item);
+        DoubleList.addFirst(item);
     }
 
     @Override
@@ -24,7 +24,7 @@ public class ListaSimpleStack<T> implements IStack<T>{
         if (isEmpty()) {
             throw new EmptyStackException();
         }
-        return SingleList.removeFirst();
+        return DoubleList.removeFirst();
     }
 
     @Override
@@ -33,19 +33,19 @@ public class ListaSimpleStack<T> implements IStack<T>{
         if (isEmpty()) {
             throw new EmptyStackException();
         }
-        return SingleList.getFirst();
+        return DoubleList.getFirst();
     }
 
     @Override
     public boolean isEmpty() {
         // TODO Auto-generated method stub
-        return SingleList.isEmpty();
+        return DoubleList.isEmpty();
     }
 
     @Override
     public int size() {
         // TODO Auto-generated method stub
-        return SingleList.size();
+        return DoubleList.size();
     }
 
 

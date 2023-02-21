@@ -1,11 +1,9 @@
-/** Se nos autorizo reutilizar el codigo de la hdt2 en esto
- * @author: Sofia Garcia, Diego Duarte, Marcela Cordon 
- * 
- * @since:30/01/2023
- **/
-
-
- import java.util.EmptyStackException;
+/**
+ * @author Sofia Garcia
+ * Folder: HDT4
+ * Archivo: IStack.java
+ * Fecha: 21/02/2023
+ */
 
  /**
   * Stack
@@ -14,37 +12,40 @@
  public interface IStack<T> {
  
     /**
-     * post: el item se agrega a Stack 
-     * va hacer popped si no hay un empuje intermedio
+     * Agrega un elemento al tope de la pila.
      * 
-     * @param item elemento para empujar a la pila
+     * @param i el elemento a agregar
      */
-    public void push(T item);
- 
-    /**
-     * pre: la pila no esta vacia 
-     * post: el elemento empujado mas recientemente se elimina y se devuelve
-     * 
-     * @return el elemento en la parte superior de la pila.
-     * @throws EmptyStackException Si la pila esta vacia.
-     */
-    public T pull() throws EmptyStackException;
- 
-
- 
-   /**
-    * 
-    * @return Verdadero si el stack está vacío
-    */
-    public boolean empty();
-
+    void push(T item);
 
     /**
-    * devuelve devuelve el número de elementos en la pila: Verdadero si está vacío, falso en caso contrario. 
-    * 
-    * @return The number of elements in the stack.
-    */
-   public int size();
- 
+     * Elimina y retorna el elemento del tope de la pila.
+     * 
+     * @return el elemento en el tope de la pila
+     * @throws NoSuchElementException si la pila está vacía
+     */
+    T pop();
+
+    /**
+     * Retorna el elemento del tope de la pila sin eliminarlo.
+     * 
+     * @return el elemento en el tope de la pila
+     * @throws NoSuchElementException si la pila está vacía
+     */
+    T peek();
+
+    /**
+     * Verifica si la pila está vacía.
+     * 
+     * @return true si la pila está vacía, false en caso contrario
+     */
+    boolean isEmpty();
+
+    /**
+     * Retorna el número de elementos en la pila.
+     * 
+     * @return el tamaño de la pila
+     */
+    int size();
  
  }
