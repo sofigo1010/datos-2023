@@ -69,7 +69,41 @@ public class View {
         System.out.println("No se encontró un producto con ese nombre y categoría en el inventario");
     }
 
+    /** 
+     * ensena los productos del carrito
+     */
+    public void verproduscarrito(String listado){
+        System.out.println("\t\t\t\t\t\t\tLISTADO DE PRODUCTOS EN TU CARRITO\n\n"+listado);
 
+    }
+
+    /** 
+     * ensena los productos del inventario
+     */
+    public void verproductosinventario(String listado){
+        System.out.println("\t\t\t\t\t\t\tLISTADO DE PRODUCTOS EN EL INVENTARIO\n\n"+listado);
+    }
+
+    /** 
+     * cuando no entra una opcion valida aparece esto en pantalla
+     */
+    public void error(){
+        System.out.println("Ingrese una opción válida");
+    }
+
+    /** 
+     * mensaje de salida del programa
+     */
+    public void adios(){
+        System.out.println("SUPERMERCADO ENCHILADA NICOLITA TE DESEA UN EXCELENTE DÍA Y ESPERA QUE REGRESES PRONTO! HASTA LUEGO");
+    }
+
+    /** 
+     * muestra la categoria de un producto
+     */
+    public void vercategoriaproducto(String categoria){
+        System.out.println(categoria);
+    }
     
 
 }

@@ -45,33 +45,35 @@ public class Controller {
             else if (choice2 == 2){
                 //Ver la categoría de un producto
                 String producto = vista.nombreproductnuevo();
-                
+                vista.vercategoriaproducto(manager.buscarCategoriaPorNombre(inventario, producto));;
                 
             }
             else if (choice2 == 3){
                 //ver los productos del carrito
-                
+                vista.verproduscarrito(manager.vertodoslositemsendesorden(carritodecompras));
             }
             else if (choice2 == 4){
                 //ver los productos del carrito ordenados
-                
+                vista.verproduscarrito(manager.obtenerProductosOrdenadosPorCategoria(carritodecompras));
                 
             }
             else if (choice2 == 5){
                 //ver todos los productos del inventario
-                
+                vista.verproductosinventario(manager.vertodoslositemsendesorden(inventario));
                 
             }
             else if (choice2 == 6){
                 //ver todos los productos del inventario ordenados
-                
+                vista.verproductosinventario(manager.obtenerProductosOrdenadosPorCategoria(inventario));
             }
             else if (choice2 == 7){
-                
+                //salir
+                vista.adios();
+                start = false;
     
             }
             else{
-                
+                vista.error();
                 
             }
 
