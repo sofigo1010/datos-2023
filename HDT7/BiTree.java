@@ -1,4 +1,5 @@
-
+import java.io.BufferedReader;
+import java.io.FileReader;
 
 /**
  * Tomado de referencia del libro Java Structure y el proporcionado por el catedratico
@@ -158,5 +159,33 @@
         inOrderTraversal(root.getLeft());
         orden+=root.getValue();
         inOrderTraversal(root.getRight());
+    }
+
+    /** 
+     * @param fileRoute
+     * @param key
+     * @param arbolT
+     * @return ArbolBinario<ComparablePalabra<String, String[]>>
+     */
+    public static BiTree<Compare<String,String[]>> crearArbolTraduccion(String fileRoute, int key, BiTree<Compare<String,String[]>> arbolT){
+        FileReader arr;
+        BufferedReader reader;
+        try {
+            arr = new FileReader(fileRoute);
+            if (arr.ready()) {
+                reader = new BufferedReader(arr); // read the file
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    String[] palabras = line.split(",");
+                    Compare<String, String[]> nuevaPalabra = new Compare<>(palabras[key].trim(),palabras);
+                    arbolT.insert(new Compare<String, String[]>(palabras[key].trim(),palabras));
+                }
+                return arbolT;
+            } else {
+                throw new RuntimeException("File route doesn't exist");
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Unexpected Error: "+e);
+        }
     }
 }
