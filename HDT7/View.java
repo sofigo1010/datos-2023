@@ -28,7 +28,7 @@ public class View {
     public String inicioescogerdiccionario (){
         System.out.println("\n\nIngrese la dirección del archivo que contiene el diccionario");
         answ = sc.nextLine();
-        answ += sc.next();
+        
         return answ;
     }
 

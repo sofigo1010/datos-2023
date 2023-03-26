@@ -15,11 +15,10 @@ public class Controller {
 
 
     public void translator (){
+        String diccionario = vista.inicioescogerdiccionario();
         while (translate == true){
             opcion = vista.accion();
-            
             if (opcion == 1){
-                String diccionario = vista.inicioescogerdiccionario();
                 String textoatraducir = vista.iniciotextoatraducir();
                 int posicionKey = vista.seleccionaridiomaog() - 1;
                 int posicionvalor = vista.seleccionaridiomasiguiente() -1;
