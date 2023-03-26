@@ -1,4 +1,10 @@
 import java.util.Scanner;
+/**
+ * @author Sofia Garcia
+ * Folder: HDT7
+ * Archivo: View.java
+ * Fecha: 25/03/2023
+ */
 
 public class View {
     String answ;
@@ -22,6 +28,7 @@ public class View {
     public String inicioescogerdiccionario (){
         System.out.println("\n\nIngrese la dirección del archivo que contiene el diccionario");
         answ = sc.nextLine();
+        answ += sc.next();
         return answ;
     }
 
@@ -31,6 +38,7 @@ public class View {
     public String iniciotextoatraducir(){
         System.out.println("\n\nAhora ingrese la dirección del archivo que contiene el texto que desea traducir");
         answ = sc.nextLine();
+        answ += sc.next();
         return answ;
     }
 
@@ -53,8 +61,23 @@ public class View {
         return answer;
     }
     
+
+    
+    /** Para presentar los resultados
+     * @param textoinicial
+     * @param traducido
+     * @param asociaciones
+     */
     public void resultados(String textoinicial, String traducido, String asociaciones){
         System.out.println("\n\n\nTexto inicial: " + textoinicial + "\nTexto traducido: " +traducido+ "\n\nAsociaciones del arbol: "+ asociaciones);
+    }
+
+    public void mensajededespedida(){
+        System.out.println("Hasta luego!");
+    }
+
+    public void error(){
+        System.out.println("Opcion inválida, intente de nuevo");
     }
 
 }

@@ -1,5 +1,12 @@
 /**
- *Sofia Garcia - 22210
+ * @author Sofia Garcia
+ * Folder: HDT7
+ * Archivo: Compare.java
+ * Fecha: 25/03/2023
+ */
+
+/**
+ *
  * Tomado de referencia del libro Java Structure 
  * @param <K>
  * @param <V>

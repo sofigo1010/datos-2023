@@ -1,3 +1,10 @@
+/**
+ * @author Sofia Garcia
+ * Folder: HDT7
+ * Archivo: Words.java
+ * Fecha: 25/03/2023
+ */
+
 public class Words<V,K> {
     public V key;
     public K value;

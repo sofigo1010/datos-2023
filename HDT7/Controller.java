@@ -1,7 +1,9 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.BitSet;
+/**
+ * @author Sofia Garcia
+ * Folder: HDT7
+ * Archivo: Controller.java
+ * Fecha: 25/03/2023
+ */
 
 public class Controller {
     View vista = new View();
@@ -9,19 +11,41 @@ public class Controller {
     BiTree<Compare<String,String[]>> traductor = new BiTree<>();
     int inicial = 0;
     int deseado = 0;
+    int opcion = 0;
+
 
     public void translator (){
         while (translate == true){
-            String diccionario = vista.inicioescogerdiccionario();
-            String textoatraducir = vista.iniciotextoatraducir();
-            int posicionKey = vista.seleccionaridiomaog() - 1;
-            int posicionvalor = vista.seleccionaridiomasiguiente() -1;
-            traductor = BiTree.crearArbolTraduccion(diccionario,posicionKey, traductor);
-            String textoinicial = Read.leerTexto(textoatraducir);
-            String traducido = traducirTexto(textoinicial, posicionKey, posicionvalor);
-            traductor.inOrderTraversal(traductor);
-            String asociacionesdelarbol = traductor.getInOrder();
-            vista.resultados(textoinicial, traducido, asociacionesdelarbol);
+            opcion = vista.accion();
+            
+            if (opcion == 1){
+                String diccionario = vista.inicioescogerdiccionario();
+                String textoatraducir = vista.iniciotextoatraducir();
+                int posicionKey = vista.seleccionaridiomaog() - 1;
+                int posicionvalor = vista.seleccionaridiomasiguiente() -1;
+                if (posicionKey >= 0 && posicionKey <= 2 ){
+                    if (posicionvalor >= 0 && posicionvalor <= 2){
+                        traductor = Read.crearArbolTraduccion(diccionario,posicionKey, traductor);
+                        String textoinicial = Read.leerTexto(textoatraducir);
+                        String traducido = traducirTexto(textoinicial, posicionKey, posicionvalor);
+                        traductor.inOrderTraversal(traductor);
+                        String asociacionesdelarbol = traductor.getInOrder();
+                        vista.resultados(textoinicial, traducido, asociacionesdelarbol);
+                    }
+                }
+                else{
+                    vista.error();
+                }
+
+            }
+            else if (opcion == 2){
+                vista.mensajededespedida();
+                translate = false;
+                break;
+            }
+            else{
+                vista.error();
+            }
         
         }
     }
