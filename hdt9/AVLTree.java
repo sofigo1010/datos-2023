@@ -1,3 +1,10 @@
+/**
+ * @author Sofia Garcia
+ * Folder: HDT7
+ * Archivo: AVLTree.java
+ * Fecha: 21/04/2023
+ */
+
 public class AVLTree<K extends Comparable<K>, V> implements Tree<K, V> {
 
     private class Node {

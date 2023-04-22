@@ -1,3 +1,10 @@
+/**
+ * @author Sofia Garcia
+ * Folder: HDT7
+ * Archivo: RedBlackTree.java
+ * Fecha: 21/04/2023
+ */
+
 public class RedBlackTree<K extends Comparable<K>, V> implements Tree<K, V> {
 
     private static final boolean RED = true;

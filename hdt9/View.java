@@ -1,3 +1,11 @@
+/**
+ * @author Sofia Garcia
+ * Folder: HDT7
+ * Archivo: View.java
+ * Fecha: 21/04/2023
+ */
+
+
 import java.util.Scanner;
 
 public class View {
