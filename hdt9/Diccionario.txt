@@ -1,0 +1,17 @@
+casa, house
+perro,dog
+gato,cat
+mama,mom
+hermana,sister
+colegio,school
+profesor,teacher
+tarea,homework
+comio,ate
+mi,my
+y,and
+pego,hit
+corrio,ran
+yo,i
+pedi,asked
+mas,more
+tiempo,time
